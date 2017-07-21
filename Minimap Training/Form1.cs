@@ -56,8 +56,6 @@ namespace Minimap_Training
             dot.Opacity = 0;
             timer1.Interval = time;
             timer1.Start();
-            
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -71,7 +69,6 @@ namespace Minimap_Training
             DesktopLocation = new Point(x, y);
             dot.DesktopLocation = new Point(x + 14, y + 14);
             time0 = DateTime.Now;
-
         }
     }
 }
