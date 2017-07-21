@@ -16,15 +16,5 @@ namespace Minimap_Training
         {
             InitializeComponent();
         }
-
-        private void Form2_MouseClick(object sender, MouseEventArgs e)
-        {
-            
-        }
-
-        private void Form2_MouseDown(object sender, MouseEventArgs e)
-        {
-
-        }
     }
 }

@@ -27,7 +27,17 @@ namespace Minimap_Training
         {
             InitializeComponent();
         }
-        
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            DesktopLocation = new Point(945, 585);
+            dot = new Form2();
+            dot.Show(this);
+            dot.DesktopLocation = new Point(959, 599);
+            dot.BackColor = Color.FromArgb(255, Properties.Settings.Default.Red, Properties.Settings.Default.Green, Properties.Settings.Default.Blue);
+            dot.MouseClick += new MouseEventHandler(Form1_MouseClick);
+        }
+
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
             if (clicked > -1)
@@ -47,23 +57,6 @@ namespace Minimap_Training
             timer1.Interval = time;
             timer1.Start();
             
-
-        }
-
-
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            DesktopLocation = new Point(945, 585);
-            dot = new Form2();
-            dot.Show(this);
-            dot.DesktopLocation = new Point(959, 599);
-            dot.BackColor = Color.FromArgb(255, Properties.Settings.Default.Red, Properties.Settings.Default.Green, Properties.Settings.Default.Blue);
-            dot.MouseClick += new MouseEventHandler(Form1_MouseClick);
-        }
-
-        private void Form1_MouseUp(object sender, MouseEventArgs e)
-        {
 
         }
 
