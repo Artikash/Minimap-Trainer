@@ -13,10 +13,6 @@ namespace Minimap_Training
 {
     public partial class Form1 : Form
     {
-        int x1 = Properties.Settings.Default.x1;
-        int y1 = Properties.Settings.Default.y1;
-        int x2 = Properties.Settings.Default.x2;
-        int y2 = Properties.Settings.Default.y2;
         Form dot;
         int clicked = -1;
         List<double> responseTimes = new List<double>();
@@ -45,30 +41,41 @@ namespace Minimap_Training
                 TimeSpan span = DateTime.Now - time0;
                 double responseTime = span.TotalSeconds;
                 responseTimes.Add(responseTime);
-                double average = responseTimes.Average();
                 Console.WriteLine("Response Time: " + responseTime.ToString());
-                Console.WriteLine("Average Time: " + average.ToString());
+                Console.WriteLine("Average Time: " + responseTimes.Average().ToString());
             }
-
             clicked++;
-            int time = rng.Next(Properties.Settings.Default.minTime, Properties.Settings.Default.maxTime);
             Opacity = 0;
             dot.Opacity = 0;
-            timer1.Interval = time;
+            timer1.Interval = rng.Next(Properties.Settings.Default.minTime, Properties.Settings.Default.maxTime);
             timer1.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Stop();
+            dot.Size = new Size(5, 5);
             Opacity = .01;
             dot.Opacity = 1;
-            int x = rng.Next(x1, x2);
-            int y = rng.Next(y1, y2);
-
+            int x = rng.Next(Properties.Settings.Default.x1, Properties.Settings.Default.x2);
+            int y = rng.Next(Properties.Settings.Default.y1, Properties.Settings.Default.y2);
             DesktopLocation = new Point(x, y);
-            dot.DesktopLocation = new Point(x + 14, y + 14);
+            dot.DesktopLocation = new Point(x + 13, y + 13);
             time0 = DateTime.Now;
+            timer2.Start();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if (dot.Size.Height < 24)
+            {
+                dot.Size = new Size(dot.Size.Width + 6, dot.Size.Height + 6);
+                dot.DesktopLocation = new Point(dot.DesktopLocation.X - 3, dot.DesktopLocation.Y - 3);
+            }
+            else
+            {
+                timer2.Stop();
+            }
         }
     }
 }
