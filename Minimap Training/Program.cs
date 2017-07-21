@@ -14,40 +14,34 @@ namespace Minimap_Training
         [STAThread]
         static void Main()
         {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
             Console.WriteLine("Use preset settings?");
             if (Console.ReadLine() != "yes")
             {
-                Console.WriteLine("x coord of top left of minimap");
-                Properties.Settings.Default.x1 = Convert.ToInt16(Console.ReadLine());
+                Console.WriteLine("Please click on the top left of your minimap.");
+                Application.Run(new Form3());
 
-                Console.WriteLine("y coord of top left of minimap");
-                Properties.Settings.Default.y1 = Convert.ToInt16(Console.ReadLine());
-
-                Console.WriteLine("x coord of bottom right of minimap");
-                Properties.Settings.Default.x2 = Convert.ToInt16(Console.ReadLine());
-
-                Console.WriteLine("y coord of bottom right of minimap");
-                Properties.Settings.Default.y2 = Convert.ToInt16(Console.ReadLine());
-
-                Console.WriteLine("min time between appearances (ms)");
+                Console.WriteLine("Minimum time between appearances? (ms)");
                 Properties.Settings.Default.minTime = Convert.ToInt32(Console.ReadLine());
 
-                Console.WriteLine("max time between appearances (ms)");
+                Console.WriteLine("Maximum time between appearances? (ms)");
                 Properties.Settings.Default.maxTime = Convert.ToInt32(Console.ReadLine());
 
-                Console.WriteLine("Red");
-                Properties.Settings.Default.Red = Convert.ToInt16(Console.ReadLine());
+                Console.WriteLine("Custom Color?");
+                if (Console.ReadLine() == "yes")
+                {
+                    Console.WriteLine("Red");
+                    Properties.Settings.Default.Red = Convert.ToInt16(Console.ReadLine());
 
-                Console.WriteLine("Green");
-                Properties.Settings.Default.Green = Convert.ToInt16(Console.ReadLine());
+                    Console.WriteLine("Green");
+                    Properties.Settings.Default.Green = Convert.ToInt16(Console.ReadLine());
 
-                Console.WriteLine("Blue");
-                Properties.Settings.Default.Blue = Convert.ToInt16(Console.ReadLine());
+                    Console.WriteLine("Blue");
+                    Properties.Settings.Default.Blue = Convert.ToInt16(Console.ReadLine());
+                }               
             }
-
             Console.WriteLine("Starting!");
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
     }

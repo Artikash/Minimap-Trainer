@@ -1,6 +1,6 @@
 ﻿namespace Minimap_Training
 {
-    partial class Form1
+    partial class Form3
     {
         /// <summary>
         /// Required designer variable.
@@ -28,43 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // timer2
-            // 
-            this.timer2.Interval = 7000;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // Form1
+            // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(30, 30);
+            this.ClientSize = new System.Drawing.Size(1920, 1200);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(30, 30);
-            this.MinimumSize = new System.Drawing.Size(30, 30);
-            this.Name = "Form1";
+            this.Name = "Form3";
             this.Opacity = 0.01D;
-            this.ShowInTaskbar = false;
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Form3";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
+            this.Load += new System.EventHandler(this.Form3_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form3_MouseClick);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Timer timer2;
     }
 }
-

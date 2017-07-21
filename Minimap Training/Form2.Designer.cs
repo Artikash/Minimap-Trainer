@@ -40,6 +40,7 @@
             this.MaximumSize = new System.Drawing.Size(30, 30);
             this.MinimumSize = new System.Drawing.Size(5, 5);
             this.Name = "Form2";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.ResumeLayout(false);
