@@ -10,6 +10,8 @@ This will cause the dot to dissapear, and after another random time period it wi
 You can see how long you took to recognize the dot was there and click by looking at the console window afterwards.  
 
 Notes:  
-Only works on windowed mode.  
+Only works on windowed and fullscreen window mode.  
+However, the taskbar won't go away as when one is playing normally in fullscreen window mode.  
+Please use task manager to end explorer.exe if you want to use this in fullscreen window mode. Or use a second monitor.  
 I didn't add any error handling. If you input something you're not supposed to (e.g. minimum time is greater than maximum time), the program will probably crash or behave strangely.
 
