@@ -44,6 +44,7 @@ namespace Minimap_Training
                 Console.WriteLine("Response Time: " + responseTime.ToString());
                 Console.WriteLine("Average Time: " + responseTimes.Average().ToString());
             }
+            timer2.Stop();
             clicked++;
             Opacity = 0;
             dot.Opacity = 0;

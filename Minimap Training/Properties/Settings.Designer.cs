@@ -25,7 +25,7 @@ namespace Minimap_Training.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("500")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1000")]
         public int y1 {
             get {
                 return ((int)(this["y1"]));
@@ -73,7 +73,7 @@ namespace Minimap_Training.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("60000")]
+        [global::System.Configuration.DefaultSettingValueAttribute("3000")]
         public int maxTime {
             get {
                 return ((int)(this["maxTime"]));
@@ -85,7 +85,7 @@ namespace Minimap_Training.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("500")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1000")]
         public int x1 {
             get {
                 return ((int)(this["x1"]));
