@@ -18,56 +18,35 @@ namespace Minimap_Training
             if (Console.ReadLine() != "yes")
             {
                 Console.WriteLine("x coord of top left of minimap");
-                string x1string = Console.ReadLine();
-                int x1int = Convert.ToInt16(x1string);
-                Properties.Settings.Default.x1 = x1int;
+                Properties.Settings.Default.x1 = Convert.ToInt16(Console.ReadLine());
 
                 Console.WriteLine("y coord of top left of minimap");
-                string y1string = Console.ReadLine();
-                int y1int = Convert.ToInt16(y1string);
-                Properties.Settings.Default.y1 = y1int;
+                Properties.Settings.Default.y1 = Convert.ToInt16(Console.ReadLine());
 
                 Console.WriteLine("x coord of bottom right of minimap");
-                string x2string = Console.ReadLine();
-                int x2int = Convert.ToInt16(x2string);
-                Properties.Settings.Default.x2 = x2int;
+                Properties.Settings.Default.x2 = Convert.ToInt16(Console.ReadLine());
 
                 Console.WriteLine("y coord of bottom right of minimap");
-                string y2string = Console.ReadLine();
-                int y2int = Convert.ToInt16(y2string);
-                Properties.Settings.Default.y2 = y2int;
+                Properties.Settings.Default.y2 = Convert.ToInt16(Console.ReadLine());
 
                 Console.WriteLine("min time between appearances (ms)");
-                string minTimeString = Console.ReadLine();
-                int minTimeInt = Convert.ToInt32(minTimeString);
-                Properties.Settings.Default.minTime = minTimeInt;
+                Properties.Settings.Default.minTime = Convert.ToInt32(Console.ReadLine());
 
                 Console.WriteLine("max time between appearances (ms)");
-                string maxTimeString = Console.ReadLine();
-                int maxTimeInt = Convert.ToInt32(maxTimeString);
-                Properties.Settings.Default.maxTime = maxTimeInt;
+                Properties.Settings.Default.maxTime = Convert.ToInt32(Console.ReadLine());
 
                 Console.WriteLine("Red");
-                string stringRed = Console.ReadLine();
-                int intRed = Convert.ToInt16(stringRed);
-                Properties.Settings.Default.Red = intRed;
+                Properties.Settings.Default.Red = Convert.ToInt16(Console.ReadLine());
 
                 Console.WriteLine("Green");
-                string stringGreen = Console.ReadLine();
-                int intGreen = Convert.ToInt16(stringGreen);
-                Properties.Settings.Default.Green = intGreen;
+                Properties.Settings.Default.Green = Convert.ToInt16(Console.ReadLine());
 
                 Console.WriteLine("Blue");
-                string stringBlue = Console.ReadLine();
-                int intBlue = Convert.ToInt16(stringBlue);
-                Properties.Settings.Default.Blue = intBlue;
+                Properties.Settings.Default.Blue = Convert.ToInt16(Console.ReadLine());
             }
             else { };
 
-
             Console.WriteLine("Starting!");
-
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
