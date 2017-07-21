@@ -38,8 +38,7 @@ namespace Minimap_Training
         {
             if (clicked > -1)
             {
-                TimeSpan span = DateTime.Now - time0;
-                double responseTime = span.TotalSeconds;
+                double responseTime = (DateTime.Now - time0).TotalSeconds;
                 responseTimes.Add(responseTime);
                 Console.WriteLine("Response Time: " + responseTime.ToString());
                 Console.WriteLine("Average Time: " + responseTimes.Average().ToString());

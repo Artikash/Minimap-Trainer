@@ -44,7 +44,6 @@ namespace Minimap_Training
                 Console.WriteLine("Blue");
                 Properties.Settings.Default.Blue = Convert.ToInt16(Console.ReadLine());
             }
-            else { };
 
             Console.WriteLine("Starting!");
             Application.EnableVisualStyles();
