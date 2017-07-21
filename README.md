@@ -2,6 +2,8 @@
 
 Program to train minimap awareness in Starcraft 2 (and other games)
 
+
+
 How it works:
 If you entered your settings into the config file enter "yes" without quotes to "Use preset settings?"
 
@@ -14,6 +16,8 @@ After a random amount of time (specified earlier) the dot will appear on your mi
 This will cause the dot to dissapear, and after another random time period it will reappear on your minimap. Double click near the dot as soon as you notice it. Repeat.
 
 You can see how long you took to recognize the dot was there and click by looking at the console window afterwards.
+
+
 
 
 Notes:
