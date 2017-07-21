@@ -1,5 +1,7 @@
 # Starcraft 2 Minimap Trainer
 
+Program to train minimap awareness in Starcraft 2 (and other games)
+
 How it works:
 If you entered your settings into the config file enter "yes" without quotes to "Use preset settings?"
 
