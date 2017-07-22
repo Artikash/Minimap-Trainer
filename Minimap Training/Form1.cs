@@ -26,10 +26,10 @@ namespace Minimap_Training
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            DesktopLocation = new Point(945, 585);
+            DesktopLocation = new Point(Properties.Settings.Default.x1, Properties.Settings.Default.y1);
             dot = new Form2();
             dot.Show(this);
-            dot.DesktopLocation = new Point(959, 599);
+            dot.DesktopLocation = new Point(Properties.Settings.Default.x1 + 13, Properties.Settings.Default.y1 + 13);
             dot.BackColor = Color.FromArgb(255, Properties.Settings.Default.Red, Properties.Settings.Default.Green, Properties.Settings.Default.Blue);
             dot.MouseClick += new MouseEventHandler(Form1_MouseClick);
         }
@@ -40,8 +40,8 @@ namespace Minimap_Training
             {
                 double responseTime = (DateTime.Now - time0).TotalSeconds;
                 responseTimes.Add(responseTime);
-                Console.WriteLine("Response Time: " + responseTime.ToString());
-                Console.WriteLine("Average Time: " + responseTimes.Average().ToString());
+                Console.WriteLine("Response Time: " + responseTime.ToString() + "s");
+                Console.WriteLine("Average Time: " + responseTimes.Average().ToString() + "s");
             }
             timer2.Stop();
             clicked++;
@@ -59,8 +59,8 @@ namespace Minimap_Training
             dot.Opacity = 1;
             int x = rng.Next(Properties.Settings.Default.x1, Properties.Settings.Default.x2);
             int y = rng.Next(Properties.Settings.Default.y1, Properties.Settings.Default.y2);
-            DesktopLocation = new Point(x, y);
-            dot.DesktopLocation = new Point(x + 13, y + 13);
+            DesktopLocation = new Point(x - 13, y - 13);
+            dot.DesktopLocation = new Point(x, y);
             time0 = DateTime.Now;
             timer2.Start();
         }
