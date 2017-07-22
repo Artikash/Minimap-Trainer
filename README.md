@@ -5,7 +5,7 @@ How it works:
 If you entered your settings into the config file enter "yes" without quotes to "Use preset settings?"  
 If you want a custom color for the dot enter "yes" without quotes to "Custom Color?"  
 
-A dot will then appear near the middle of your screen, please click near it.  
+After entering all settings, a dot will appear near the middle of your screen, please click near it. Then start a game of SC2.    
 After a random amount of time (specified earlier) the dot will appear on your minimap. Click near it as soon as you notice it.  
 This will cause the dot to dissapear, and after another random time period it will reappear on your minimap. Click near the dot as soon as you notice it. Repeat. The dot will grow bigger the longer you don't click it.  
 You can see exactly how long you took to recognize the dot was there and click by looking at the console window afterwards.  
