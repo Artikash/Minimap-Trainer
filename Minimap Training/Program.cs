@@ -16,17 +16,11 @@ namespace Minimap_Training
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Console.WriteLine("Use preset settings?");
+            Console.WriteLine("Use previous settings?");
             if (Console.ReadLine() != "yes")
             {
                 Console.WriteLine("Please click on the top left of your minimap.");
                 Application.Run(new Form3());
-
-                Console.WriteLine("Minimum time between appearances? (ms)");
-                Properties.Settings.Default.minTime = Convert.ToInt32(Console.ReadLine());
-
-                Console.WriteLine("Maximum time between appearances? (ms)");
-                Properties.Settings.Default.maxTime = Convert.ToInt32(Console.ReadLine());
 
                 Console.WriteLine("Custom Color?");
                 if (Console.ReadLine() == "yes")
@@ -39,7 +33,8 @@ namespace Minimap_Training
 
                     Console.WriteLine("Blue");
                     Properties.Settings.Default.Blue = Convert.ToInt16(Console.ReadLine());
-                }               
+                }
+                Properties.Settings.Default.Save();
             }
             Console.WriteLine("Starting!");
             Application.Run(new Form1());

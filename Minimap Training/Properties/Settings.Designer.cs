@@ -73,7 +73,7 @@ namespace Minimap_Training.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("3000")]
+        [global::System.Configuration.DefaultSettingValueAttribute("60000")]
         public int maxTime {
             get {
                 return ((int)(this["maxTime"]));
