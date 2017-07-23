@@ -8,16 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Timers;
+using System.Runtime.InteropServices;
 
 namespace Minimap_Training
 {
     public partial class Form1 : Form
     {
+        [DllImport("user32.dll")] private static extern IntPtr GetForegroundWindow();
+        [DllImport("user32.dll")] private static extern bool SetForegroundWindow(IntPtr hWnd);
         Form dot;
         int clicked = -1;
         List<double> responseTimes = new List<double>();
         Random rng = new Random();
         static DateTime time0;
+        IntPtr game;
 
         public Form1()
         {
@@ -36,6 +40,7 @@ namespace Minimap_Training
 
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
+            SetForegroundWindow(game);
             if (clicked > -1)
             {
                 double responseTime = (DateTime.Now - time0).TotalSeconds;
@@ -53,6 +58,7 @@ namespace Minimap_Training
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            game = GetForegroundWindow();
             timer1.Stop();
             dot.Size = new Size(5, 5);
             Opacity = .01;

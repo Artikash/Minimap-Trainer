@@ -21,6 +21,7 @@ namespace Minimap_Training
         private void Form3_Load(object sender, EventArgs e)
         {
             DesktopLocation = new Point(0, 0);
+            Size = new Size(12000, 12000);
         }
 
         private void Form3_MouseClick(object sender, MouseEventArgs e)
