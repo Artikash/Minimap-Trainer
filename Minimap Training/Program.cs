@@ -26,9 +26,9 @@ namespace Minimap_Training
                 if (Console.ReadLine() == "yes")
                 {
                     Console.WriteLine("Red");
-                    Properties.Settings.Default.Red = Convert.ToInt16(Console.ReadLine());
-
-                    Console.WriteLine("Green");
+                    Properties.Settings.Default.Red = Convert.ToInt16(Console.ReadLine());  //these properties.settings.default settings are saved 
+                                                                                            //when you close and reopen the program
+                    Console.WriteLine("Green");                                             
                     Properties.Settings.Default.Green = Convert.ToInt16(Console.ReadLine());
 
                     Console.WriteLine("Blue");
@@ -37,7 +37,7 @@ namespace Minimap_Training
                 Properties.Settings.Default.Save();
             }
             Console.WriteLine("Starting!");
-            Application.Run(new Form1());
+            Application.Run(new Form1()); //the above is setup, most of the real code is here
         }
     }
 }
