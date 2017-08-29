@@ -1,5 +1,6 @@
 #Minimap Trainer:  
-Program to train minimap awareness in Starcraft 2, League of Legends, Dota 2, etc.
 
 
-Randomly draws dots on your minimap, your goal is to play your game while staring at your minimap noticing the dots as fast as possible
+![How it looks](http://i.imgur.com/2p1c6Oi.png?1) 
+Draws dots on your minimap every so often, the goal is to play a game of LoL/SC2/DoTA2/other games with a minimap while noticing each dot fairly quickly.  
+Windowed and Borderless modes only.
