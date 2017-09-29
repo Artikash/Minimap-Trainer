@@ -1,6 +1,6 @@
 ﻿namespace Minimap_Training
 {
-    partial class Form1
+    partial class Dot
     {
         /// <summary>
         /// Required designer variable.
@@ -28,43 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // timer2
-            // 
-            this.timer2.Interval = 7000;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // Form1
+            // Dot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(30, 30);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(5, 5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(30, 30);
-            this.MinimumSize = new System.Drawing.Size(30, 30);
-            this.Name = "Form1";
-            this.Opacity = 0.01D;
+            this.MinimumSize = new System.Drawing.Size(5, 5);
+            this.Name = "Dot";
             this.ShowInTaskbar = false;
-            this.Text = "Form1";
-            this.TopMost = true;
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Dot";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Timer timer2;
     }
 }
-

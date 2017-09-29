@@ -1,6 +1,6 @@
 ﻿namespace Minimap_Training
 {
-    partial class Form3
+    partial class CoordInput
     {
         /// <summary>
         /// Required designer variable.
@@ -30,19 +30,19 @@
         {
             this.SuspendLayout();
             // 
-            // Form3
+            // CoordInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1920, 1200);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form3";
+            this.Name = "CoordInput";
             this.Opacity = 0.01D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form3";
+            this.Text = "CoordInput";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.Form3_Load);
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form3_MouseClick);
+            this.Load += new System.EventHandler(this.CoordInput_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CoordInput_MouseClick);
             this.ResumeLayout(false);
 
         }

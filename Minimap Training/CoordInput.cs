@@ -9,22 +9,22 @@ using System.Windows.Forms;
 
 namespace Minimap_Training
 {
-    public partial class Form3 : Form
+    public partial class CoordInput : Form
     {
         bool clicked = false; 
 
-        public Form3()
+        public CoordInput()
         {
             InitializeComponent();
         }
 
-        private void Form3_Load(object sender, EventArgs e) //loaded in the first few lines of Program.cs in the main method
+        private void CoordInput_Load(object sender, EventArgs e) //loaded in the first few lines of Program.cs in the main method
         {
             DesktopLocation = new Point(0, 0);
             Size = new Size(12000, 12000); //covers the whole screen so you can click anywhere and have the program register 
         }                                  //which coords you clicked on
 
-        private void Form3_MouseClick(object sender, MouseEventArgs e)
+        private void CoordInput_MouseClick(object sender, MouseEventArgs e)
         {
             int x = e.X;
             int y = e.Y; //the coordinates that the user clicked on

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Minimap_Training
 {
-    public partial class Form2 : Form
+    public partial class Dot : Form
     {
-        public Form2()
+        public Dot()
         {
             InitializeComponent();
         }

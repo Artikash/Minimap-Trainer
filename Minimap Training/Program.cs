@@ -20,7 +20,7 @@ namespace Minimap_Training
             if (Console.ReadLine() != "yes")
             {
                 Console.WriteLine("Please click on the top left of your minimap.");
-                Application.Run(new Form3());
+                Application.Run(new CoordInput());
 
                 Console.WriteLine("Custom Color?");
                 if (Console.ReadLine() == "yes")
@@ -37,7 +37,7 @@ namespace Minimap_Training
                 Properties.Settings.Default.Save();
             }
             Console.WriteLine("Starting!");
-            Application.Run(new Form1()); //the above is setup, most of the real code is here
+            Application.Run(new Container()); //the above is setup, most of the real code is here
         }
     }
 }
