@@ -25,16 +25,9 @@ namespace Minimap_Training
                 Console.WriteLine("Custom Color?");
                 if (Console.ReadLine() == "yes")
                 {
-                    Console.WriteLine("Red");
-                    Properties.Settings.Default.Red = Convert.ToInt16(Console.ReadLine());  //these properties.settings.default settings are saved 
-                                                                                            //when you close and reopen the program
-                    Console.WriteLine("Green");                                             
-                    Properties.Settings.Default.Green = Convert.ToInt16(Console.ReadLine());
-
-                    Console.WriteLine("Blue");
-                    Properties.Settings.Default.Blue = Convert.ToInt16(Console.ReadLine());
+                    new ColorInput();
                 }
-                Properties.Settings.Default.Save();
+                Properties.Settings.Default.Save(); //save user settings
             }
             Console.WriteLine("Starting!");
             Application.Run(new Container()); //the above is setup, most of the real code is here

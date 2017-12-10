@@ -82,6 +82,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColorInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorInput.Designer.cs">
+      <DependentUpon>ColorInput.cs</DependentUpon>
+    </Compile>
     <Compile Include="Container.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ColorInput.resx">
+      <DependentUpon>ColorInput.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Container.resx">
       <DependentUpon>Container.cs</DependentUpon>
     </EmbeddedResource>

@@ -20,14 +20,8 @@
     <Setting Name="x1" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">1000</Value>
     </Setting>
-    <Setting Name="Red" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">64</Value>
-    </Setting>
-    <Setting Name="Green" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
-    </Setting>
-    <Setting Name="Blue" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">64</Value>
+    <Setting Name="Color" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Red</Value>
     </Setting>
   </Settings>
 </SettingsFile>

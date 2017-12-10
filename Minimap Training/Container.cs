@@ -34,7 +34,7 @@ namespace Minimap_Training
             dot = new Dot();
             dot.Show(this);
             dot.DesktopLocation = new Point(Properties.Settings.Default.x1 + 13, Properties.Settings.Default.y1 + 13);
-            dot.BackColor = Color.FromArgb(255, Properties.Settings.Default.Red, Properties.Settings.Default.Green, Properties.Settings.Default.Blue);
+            dot.BackColor = Properties.Settings.Default.Color;
             dot.MouseClick += new MouseEventHandler(Container_MouseClick);  //Container_MouseClick is also called when dot is clicked
         }                         
                                                                        
