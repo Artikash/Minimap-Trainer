@@ -17,16 +17,26 @@ namespace Minimap_Training
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Console.WriteLine("Use previous settings?");
-            if (Console.ReadLine() != "yes")
+            if (Console.ReadLine().ToLower() != "yes")
             {
                 Console.WriteLine("Please click on the top left of your minimap.");
                 Application.Run(new CoordInput());
 
                 Console.WriteLine("Custom Color?");
-                if (Console.ReadLine() == "yes")
+                if (Console.ReadLine().ToLower() == "yes")
                 {
                     new ColorInput();
                 }
+
+                Console.WriteLine("Custom times between appearances? (I recommend using the defaults.)");
+                if (Console.ReadLine().ToLower() == "yes")
+                {
+                    Console.WriteLine("Please enter minimum time (in seconds).");
+                    Properties.Settings.Default.minTime = 1000 * Int32.Parse(Console.ReadLine());
+                    Console.WriteLine("Please enter maximum time (in seconds).");
+                    Properties.Settings.Default.maxTime = 1000 * Int32.Parse(Console.ReadLine());
+                }
+
                 Properties.Settings.Default.Save(); //save user settings
             }
             Console.WriteLine("Starting!");
