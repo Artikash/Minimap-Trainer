@@ -1,4 +1,4 @@
-#Minimap Trainer:  
+## Minimap Trainer:  
 
 
 ![How it looks](http://i.imgur.com/2p1c6Oi.png?1) 
